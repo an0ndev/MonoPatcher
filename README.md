@@ -3,18 +3,18 @@ Inject custom code into Mono assemblies, such as Assembly-CSharp.dll generated b
 
 ## Dependencies
 - Mono from [the website](https://www.mono-project.com), tested with 6.10.0.104.
-- Mono.Cecil.dll (0.11.2) from [NuGet](https://www.nuget.org/packages/Mono.Cecil/): after `nuget install`, copy Mono.Cecil.dll from `Mono.Cecil.0.11.2/lib/net40/` into `dep/`.
+- Mono.Cecil.dll (0.11.2) from [NuGet](https://www.nuget.org/packages/Mono.Cecil/): after `nuget install`, copy \*.dll from `Mono.Cecil.0.11.2/lib/net40/` into `dep/`.
 
 ## Building
 ### Windows
-Use Linux instructions with `compile_and_run.bat` in place of `compile_and_run.sh`. I don't have a Windows machine around to test this script on, so please report any issues you have.
+Don't know... someone will need to port compile_and_run.sh to Batch or PowerShell.
 ### macOS
 Should be same as Linux.
 ### Linux
 ```bash
 ./compile_and_run.sh
 ```
-from a shell prompt. Output is saved to `out/MonoPatcher.exe`. `Mono.Cecil.dll` must be placed next to `MonoPatcher.exe` for the latter to work properly.
+from a shell prompt. Output is saved to `out/MonoPatcher.exe`. `\*.dll` (all Mono.Cecil assemblies) must be placed next to `MonoPatcher.exe` for the latter to work properly.
 
 ## Usage
 ```bash
